@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            width: 40%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Contact Us - Healthcare</h2>
+    <p>Please fill out the form below to contact us.</p>
+
+    <form action="/submit_contact_form" method="post">
+        <!-- Personal Information -->
+        <label for="full_name">Full Name:</label>
+        <input type="text" id="full_name" name="full_name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <!-- Healthcare Information -->
+        <label for="health_issue">Health Issue/Concern:</label>
+        <textarea id="health_issue" name="health_issue" rows="4" required></textarea>
+
+        <!-- Additional Information -->
+        <label for="preferred_contact">Preferred Contact Method:</label>
+        <select id="preferred_contact" name="preferred_contact">
+            <option value="email">Email</option>
+            <option value="phone">Phone</option>
+        </select>
+
+        <!-- Consent and Submit Button -->
+        <label for="consent">
+            <!-- <input type="checkbox" id="consent" name="consent" required> -->
+            I consent to the collection of my information for the purpose of this inquiry.
+        </label>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
