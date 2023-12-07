@@ -73,6 +73,24 @@
 
         <button type="submit">Submit</button>
     </form>
+
+    <script>
+         function formClick() {
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let phone = document.getElementById('phone').value;
+            let message = document.getElementById('message').value;
+
+            const obj ={
+                name: name,
+                email: email,
+                phone: phone,
+                message: message
+            }
+            localStorage.setItem('asad-data', JSON.stringify(obj))
+            
+        }
+    </script>
 </body>
 
 </html>
